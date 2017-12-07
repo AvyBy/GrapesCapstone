@@ -34,5 +34,23 @@
         <StackPanel>
             <ContentControl x:Name="ActiveItem"/>
         </StackPanel>
+        <StackPanel Grid.RowSpan="3" Background="Aqua">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Grid.Column="0" Background="White">
+                    <TextBlock Text="cONTENT" FontSize="80"/>
+
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="LOGIN"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Window>
