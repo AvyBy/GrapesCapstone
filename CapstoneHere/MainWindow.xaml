@@ -5,8 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CapstoneHere"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="MainWindow" MinHeight="758" MinWidth="1360" Height="758" Width="1360" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" AllowsTransparency="True">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" Margin=" 0 0 5 0" Background="Black">
+                <materialDesign:PackIcon Kind="WindowMinimize" />
+            </Button>
+            <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" Margin=" 0 0 5 0" Background="Green">
+                <materialDesign:PackIcon Kind="WindowMaximize" />
+            </Button>
+            <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" Margin=" 0 0 5 0" Background="Red">
+                <materialDesign:PackIcon Kind="WindowClose" />
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Background="Blue">
+
+        </StackPanel>
+        <StackPanel Grid.Row="2" Background="Beige">
+
+        </StackPanel>
+        <StackPanel>
+            <ContentControl x:Name="ActiveItem"/>
+        </StackPanel>
     </Grid>
 </Window>
